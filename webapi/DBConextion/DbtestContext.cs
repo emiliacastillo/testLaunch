@@ -28,10 +28,8 @@ public partial class DbtestContext : DbContext
         {
             entity.ToTable("launch");
             entity.Property(e => e.ID).HasColumnType("int(11)");
-            //entity.Property(e => e.DateCached).HasColumnType("datetime");
             entity.Property(e => e.DateLunch).HasColumnType("datetime").IsRequired();
             entity.Property(e => e.FirstRocketlaunch).HasDefaultValue(false);
-            ///entity.Property(e => e.Cached).HasDefaultValue(false);
             entity.Property(e => e.MissionID).HasColumnType("int(11)").IsRequired();
             entity.Property(e => e.RocketID).HasColumnType("int(11)").IsRequired();
         });
